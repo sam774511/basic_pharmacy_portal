@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url('about.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    position: relative; /* Added for overlay positioning */
+}
+
+/* Overlay for dimming effect */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1; /* Place overlay above background */
+}
+
+h1 {
+    backdrop-filter: blur(60px);
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5); 
+    border: 1.5px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 10px;
+    font-size: 3rem; 
+    text-align: center;
+    max-width: 100%; 
+    color: white; 
+    padding: 12px; 
+    white-space: nowrap; 
+    margin-top: 20px; 
+    transition: transform 0.3s;
+    z-index: 2; /* Ensure h1 is above overlay */
+}
+
+h1:hover {
+    transform: scale(1.05); 
+}
+
+#navbar {
+    backdrop-filter: blur(50px); 
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: calc(100% - 40px); 
+    max-width: 1100px; 
+    z-index: 2; /* Ensure navbar is above overlay */
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0; 
+    padding: 0; 
+}        
+
+#navbar li {
+    display: inline-block;
+    margin: 0 30px; 
+}
+
+#navbar a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 18px; 
+    font-weight: bold;
+    position: relative; 
+}
+
+#navbar a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #ffffff; 
+    transition: width .3s ease, background-color .3s ease; 
+    width: 0%;
+    position: absolute;
+    left: 50%;
+    bottom: -5px; 
+    transform: translateX(-50%);
+}
+
+#navbar a:hover::after {
+    width: 100%; 
+}
+
+#navbar a:hover {
+   
+  transition-duration:.3s; 
+}
+
+section {
+  max-width:1100px;
+  margin-top :20px ;
+  padding :20px ;
+  background-color :rgba(255,255,255,0.1); /* Semi-transparent background */
+  border-radius :10px ;
+  box-shadow :0px 0px 30px rgba(0, 0, 0, .2);
+  text-align:center ; 
+  width :100%; 
+  box-sizing :border-box ; 
+  color:white; /* Changed text color to white for visibility */
+  position: relative; /* Added for stacking context */
+  z-index: 2; /* Ensure sections are above overlay */
+}
+
+footer {
+  margin-top:auto ; 
+  padding :20px ;
+  background-color :#000000 ;
+  color :white ;
+  text-align:center ;
+  width :100%; 
+  z-index :2; /* Ensure footer is above overlay */
+}
+
+@media (max-width :768px) {
+  h1 {
+      font-size :2.5rem ; 
+  }
+  
+  #navbar li {
+      margin :0 15px ; 
+  }
+  
+  #navbar a {
+      font-size :16px ; 
+  }
+  
+  section {
+      padding-left :10px ;
+      padding-right :10px ;
+  }
+}
+
+@media (max-width :480px) {
+  h1 {
+      font-size :2rem ; 
+  }
+  
+  #navbar li {
+      margin :0 10px ; 
+  }
+  
+  #navbar a {
+      font-size :14px ; 
+  }
+  
+  section {
+      padding-left :5px ;
+      padding-right :5px ;
+  }
+}

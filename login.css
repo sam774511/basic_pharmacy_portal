@@ -1,0 +1,131 @@
+body {
+    background-image: url('login.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 0; 
+    height: 100vh; 
+    font-family: 'Orbitron', sans-serif;
+    color: #fefefe;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding-top: 15px; 
+}
+
+h2 {
+    backdrop-filter: blur(60px);
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.37);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    font-size: 3rem;
+    text-align: center;
+    width: 60%;
+    padding: 5px;
+}
+
+#navbar {
+    backdrop-filter: blur(50px); 
+    box-shadow: 0px 0px 60px rgba(227, 228, 237, 0.37); 
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    padding: 5px;
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%; 
+    border-radius: 10px;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0; 
+    padding: 0; 
+} 
+
+#navbar li {
+    display: inline-block;
+    margin: 0 20px; 
+}
+
+#navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#navbar a:hover {
+    color: #3c4445;
+}
+
+.form-container {
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 60px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    padding: 40px; 
+    border-radius: 10px;
+    width: calc(90% - 40px); 
+    max-width: 500px; 
+    margin-top: 20px;
+}
+
+.form-wrapper {
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
+  width: calc(100% - 40px); 
+  max-width: 1100px; 
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px;
+  background-color: rgb(255, 255, 255);
+  color: #000000; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
+button:hover {
+  background-color: #a3a1a1;
+}
+
+@media (max-width: 768px) {
+  h2 {
+      font-size: 2.5rem; 
+  }
+  
+  #navbar li {
+      margin: 0 10px; 
+  }
+  
+  .form-container {
+      padding: 20px; 
+  }
+  
+  button {
+      width: auto; 
+  }
+  
+  input[type="text"], input[type="password"] {
+      width: auto; 
+  }
+  
+  .form-wrapper {
+      flex-direction: column; 
+      gap: 10px; 
+  }
+}

@@ -1,0 +1,155 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url('about.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Overlay to darken the background */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Main header */
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 2;
+}
+
+/* Navbar styling */
+#navbar {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    position: relative;
+    z-index: 2;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar li {
+    margin: 0 20px;
+}
+
+#navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    padding: 5px 0;
+}
+
+#navbar a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+    width: 0%;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+#navbar a:hover::after {
+    width: 100%;
+}
+
+/* Contact form container */
+.contact-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+    text-align: left;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ffffff;
+}
+
+/* Input fields */
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: #ffffff;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #272928;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #000000;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    .contact-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}

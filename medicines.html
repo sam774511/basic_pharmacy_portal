@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Karunya Pharmacy</title>
+    <link rel="stylesheet" href="medicines.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap">
+
+</head>
+
+<body>
+
+    <div id="overlay"></div>
+
+    <h1>KARUNYA PHARMACY </h1>
+
+    <div id="navbar">
+        <nav>
+            <ul>
+                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/home">HOME</a></li>
+                <li><a href="aboutus">ABOUT US</a></li>
+                <li><a href="mailto:harrisonsam@karunya.edu.in">EMAIL</a></li>
+                <li><a href="/contact">CONTACT US</a></li>
+                <li><a href="/medicine">MEDICINES</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h2>DETAILS</h2>
+        <form id="medicine-form">
+            <input type="text" id="medicine-name" name="medicineName" placeholder="Medicine Name" required />
+            <input type="submit" value="Submit" />
+        </form>
+
+        <h2>Available Medicines</h2>
+        <table id="medicine-table">
+            <thead>
+                <tr>
+                    <th>Medicine</th>
+                    <th>Price</th>
+                    <th>Manufacturer</th>
+                    <th>Side Effects</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="medicines.js"></script>
+
+</body>
+
+</html>

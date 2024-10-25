@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap">
+
+</head>
+<body>
+
+    <h2>KARUNYA PHARMACY</h2>
+
+    <div id="navbar">
+        <nav>
+            <ul>
+                <li><a href="/"><h3>LOGIN</h3></a></li>
+                <li><a href="/aboutus"><h3>ABOUT US</h3></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="form-wrapper">
+
+      <div class="form-container" id="signin-container">
+          <form id="signin-form" onsubmit="validateLogin(event)">
+              <center><h3>SIGN IN</h3></center>
+              <label for="uid">Enter User ID:</label>
+              <input type="text" class="uid" id="uid" required>
+
+              <label for="pass">Enter Password:</label>
+              <input type="password" class="pass" id="pass" required>
+
+              <center><button type="submit" id="login">LOGIN</button></center>
+          </form>
+      </div>
+
+      <div class="form-container" id="signup-container">
+          <form id="signup-form" onsubmit="validateSignup(event)">
+              <center><h3>SIGN UP</h3></center>
+              <label for="new-uid">Enter User ID:</label>
+              <input type="text" class="new-uid" id="new-uid" required>
+
+              <label for="new-pass">Enter Password:</label>
+              <input type="password" class="new-pass" id="new-pass" required>
+
+              <label for="confirm-pass">Confirm Password:</label>
+              <input type="password" class="confirm-pass" id="confirm-pass" required>
+
+              <center><button type="submit" id="signup">SIGN UP</button></center>
+          </form>
+      </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

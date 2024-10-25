@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Karunya Pharmacy</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap">
+</head>
+<body>
+    <div id="overlay"></div>
+
+    <h1>KARUNYA PHARMACY</h1>
+
+    <div id="navbar">
+        <nav>
+            <ul>
+                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/home">HOME</a></li>
+                <li><a href="/aboutus">ABOUT US</a></li>
+                <li><a href="mailto:harrisonsam@karunya.edu.in">EMAIL</a></li>
+                <li><a href="/contact">CONTACT US</a></li>
+                <li><a href="/medicine">MEDICINES</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name.." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number.." required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject of your message.." required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message.." required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>
